@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Sasso Carta Forbice</title>
+</head>
+
+<body>
+    <div class="start-screen">
+        <h1>Sasso Carta Forbice</h1>
+
+        <div class="gameplay-choices" id="gameplay-choices">
+            <button id="open-create-room-box">Crea Stanza</button>
+            <button id="open-join-room-box">Unisciti a una Stanza</button>
+        </div>
+
+        <div class="create-room-box" id="create-room-box">
+            <input type="text" id="room-id"><button id="create-room-btn">Crea</button>
+
+            <button id="cancel-create-action" class="cancel-action">Cancella</button>
+        </div>
+
+        <div class="join-room-box" id="join-room-box">
+            <div class="join-with-id">
+                <input type="text" id="join-room-input"><button id="join-room-btn">Unisciti</button>
+
+                <button id="cancel-join-action" class="cancel-action">Cancella</button>
+            </div>
+
+            <button class="join-random" id="join-random">Unisciti a una Stanza Casuale</button>
+        </div>
+
+        <div class="error-message" id="error-message">
+        </div>
+    </div>
+
+    <div class="gameplay-screen">
+        <div class="wait-message" id="wait-message">
+            <p>Aspettando che si unisca un altro giocatore...</p>
+        </div>
+
+        <div class="connected-players">
+            <div class="player">
+                <span class="dot" id="player-1"></span> <span id="player-1-tag"></span>
+            </div>
+
+            <div class="player">
+                <span class="dot" id="player-2"></span> <span id="player-2-tag"></span>
+            </div>
+        </div>
+
+        <div class="choices">
+            <div class="choice" id="rock">
+                <i class="fas fa-hand-rock"></i>
+            </div>
+
+            <div class="choice" id="paper">
+                <i class="fas fa-hand-paper"></i>
+            </div>
+
+            <div class="choice" id="scissor">
+                <i class="fas fa-hand-scissors"></i>
+            </div>
+        </div>
+
+        <div class="score">
+            <span>Tu: <span id="my-score">0</span></span>
+            <span>Avversario: <span id="enemy-score">0</span></span>
+        </div>
+
+        <div class="message-after-choice-selection" id="win-message">
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js "></script>
+</body>
+
+</html>
